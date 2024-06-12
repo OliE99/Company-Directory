@@ -1,0 +1,415 @@
+:root {
+  --red: #fd3b44;
+  --blue: #3b5998;
+  --darkgray: hsl(0, 0%, 29%);
+  --lightblue: #1877f2;
+  --lightgray: #d3d1d1;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url(./Mukta-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url(./Mukta-Bold.ttf);
+  font-weight: bold;
+}
+
+#preloader {
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: var(--lightgray);
+}
+
+*,
+button,
+select,
+input {
+  font-family: "Mukta", sans-serif;
+}
+
+button,
+select,
+option,
+input,
+.form-select,
+.form-control,
+.btn {
+  font-weight: bold;
+}
+
+body {
+  background-color: whitesmoke;
+  overflow-x: hidden;
+}
+
+header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--lightblue);
+  border-bottom: 0.25rem solid whitesmoke;
+  box-shadow: 0.2rem 0.2rem 0.2rem var(--blue);
+}
+
+.fa-users-cog {
+  color: white;
+  display: none;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: calc(1.425rem + 1.5vw);
+  margin-bottom: 0;
+  padding: 1.5vw;
+  color: white;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.15rem 0.15rem;
+  background-color: white;
+}
+
+button {
+  margin: 0.15rem;
+}
+
+.btn-primary {
+  background-color: var(--lightblue);
+  float: right;
+}
+
+.btn-light {
+  background-color: var(--blue);
+}
+
+#addLoc {
+  background-color: var(--lightblue);
+}
+
+#refreshButton {
+  color: white;
+  border: 2px solid white;
+}
+
+input,
+select {
+  text-align: left;
+}
+
+.addButtons {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 3vh 1vw;
+}
+
+.addButtons {
+  display: none;
+}
+
+#resetHidingButton,
+#resetButton {
+  display: none;
+}
+
+#forename,
+#surname,
+#newDepartment,
+#newLocation,
+#newLocationName {
+  text-transform: capitalize;
+}
+
+#newLocationName {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#newLocation,
+#newDepartment {
+  width: 100%;
+}
+
+.tableFixedHead {
+  overflow: auto;
+  height: 80vh;
+}
+
+table {
+  margin: 0vh 5vw;
+  padding: 1vh;
+  width: 90vw;
+  border: 0.1rem solid var(--lightgray);
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 5px;
+  table-layout: fixed;
+}
+
+thead {
+  display: none;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-collapse: collapse;
+  padding: 1vh;
+  z-index: 999;
+}
+
+.smaller,
+.bigger {
+  width: 100%;
+  text-align: left;
+}
+
+td {
+  width: 90%;
+  padding-left: 2vw;
+}
+
+tr {
+  padding: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  border-bottom: 0.1rem solid var(--lightgray);
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#hidingButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.modal-header {
+  background-color: var(--lightgray);
+  border-bottom: 0.25rem solid whitesmoke;
+  box-shadow: 0.2rem 0.2rem 0.2rem var(--darkgray);
+}
+
+#modal-start {
+  margin-bottom: 2vh;
+  font-weight: bolder;
+  line-height: 1rem;
+  font-size: 1.1rem;
+}
+.modal-dialog {
+  background-color: var(--lightgray);
+  border: 0.25rem solid var(--darkgray);
+}
+.modal-body {
+  background-color: whitesmoke;
+}
+
+.modal-body p {
+  font-size: 1.1rem;
+}
+
+.locationFlex,
+.departmentFlex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 3vh;
+}
+
+.modal {
+  background-color: transparent;
+}
+
+#listLocations,
+#listDepartments {
+  background-color: white;
+  padding: 1vh;
+  border-radius: 10px;
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+fieldset {
+  border: 0.25vw solid #1877f2;
+  background-color: white;
+  padding: 2vw;
+  border-radius: 10px;
+}
+
+#selectDeptLocation {
+  padding-top: 2vh;
+}
+
+.addEditForm,
+.viewEmployee,
+.newDepartmentForm,
+.newLocationForm {
+  display: none;
+}
+
+.viewEmployee,
+.newDepartmentForm,
+.newLocationForm {
+  padding: 2vh;
+}
+
+#emailFont {
+  font-size: 0.9rem;
+}
+
+.row-flex {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.form-control.search {
+  width: 100%;
+  text-align: left;
+}
+
+#addStaff,
+#addLoc,
+#addDept {
+  font-size: 0.8rem;
+  margin-right: 1.5vw;
+}
+
+@media screen and (min-width: 500px) {
+  #emailFont {
+    font-weight: lighter;
+    font-style: italic;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  header {
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 0.25rem solid whitesmoke;
+    box-shadow: 0.2rem 0.2rem 0.2rem var(--darkgray);
+  }
+
+  #refreshButton {
+    position: absolute;
+    right: 2vw;
+  }
+
+  .fa-users-cog {
+    display: block;
+    padding: 0.4rem;
+    margin: 0vh 1rem;
+  }
+
+  #hidingButton {
+    display: none;
+  }
+
+  .addButtons {
+    margin: 1vh 5vw;
+    margin-top: 2vh;
+    display: inline-flex;
+    width: 90vw;
+    justify-content: space-around;
+  }
+
+  .addButtons {
+    display: block;
+  }
+
+  .body {
+    padding-top: 1vh;
+    border: 1vh solid var(--darkgray);
+  }
+
+  .tableFixedHead {
+    height: 75vh;
+  }
+
+  thead {
+    display: table-row-group;
+    position: sticky;
+    top: 0;
+    background-color: var(--lightgray);
+    padding: 1vh;
+    z-index: 999;
+  }
+
+  table,
+  th {
+    border-top: none;
+  }
+
+  .bigger {
+    width: 25.25%;
+    text-align: left;
+  }
+
+  .smaller {
+    width: 24%;
+  }
+
+  #resetButton {
+    display: block;
+    float: right;
+  }
+
+  tr {
+    padding: 0.25rem;
+    display: table-row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  td {
+    border-top: 0.1rem solid var(--lightgray);
+    border-bottom: 0.1rem solid var(--lightgray);
+  }
+
+  #addStaff,
+  #addLoc,
+  #addDept {
+    font-size: 1rem;
+  }
+
+  .modal {
+    background-color: transparent;
+    height: fit-content;
+    max-height: 100%;
+  }
+
+  .modal-body p {
+    font-size: 1rem;
+  }
+
+  #emailFont {
+    font-size: 1rem;
+  }
+
+  .row-flex {
+    width: 100%;
+  }
+}
